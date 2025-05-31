@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "EFE",
+    " E "
+  ],
+  "key": {
+    "E": "minecraft:echo_shard",
+    "F": "the-deepest-dark:fractured_soul"
+  },
+  "result": {
+    "id": "the-deepest-dark:activated_soul",
+    "count": 1
+  }
+}

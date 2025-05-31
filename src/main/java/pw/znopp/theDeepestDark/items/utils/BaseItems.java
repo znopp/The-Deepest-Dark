@@ -33,6 +33,7 @@ public class BaseItems {
             entries.add(SoulItems.ACTIVATED_SOUL);
             entries.add(SoulItems.FRACTURED_SOUL);
             entries.add(FoodItems.RAW_SCULK);
+            entries.add(FoodItems.COOKED_SCULK);
         });
 
     }
