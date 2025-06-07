@@ -3,6 +3,7 @@ package pw.znopp.theDeepestDark.items.utils;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -30,10 +31,13 @@ public class BaseItems {
         Registry.register(Registries.ITEM_GROUP, TDD_ITEM_GROUP_KEY, TDD_ITEM_GROUP);
 
         ItemGroupEvents.modifyEntriesEvent(TDD_ITEM_GROUP_KEY).register(entries -> {
-            entries.add(SoulItems.ACTIVATED_SOUL);
-            entries.add(SoulItems.FRACTURED_SOUL);
-            entries.add(FoodItems.RAW_SCULK);
-            entries.add(FoodItems.COOKED_SCULK);
+            entries.addAll(SoulItems.getItems());
+            entries.addAll(FoodItems.getItems());
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SEARCH).register(entries -> {
+            entries.addAll(SoulItems.getItems());
+            entries.addAll(FoodItems.getItems());
         });
 
     }
