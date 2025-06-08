@@ -40,5 +40,9 @@ public class BaseItems {
             entries.addAll(FoodItems.getItems());
         });
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.addAll(FoodItems.getItems());
+        });
+
     }
 }

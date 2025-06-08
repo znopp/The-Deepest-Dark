@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " E ",
+    "AEA",
     "EFE",
-    " E "
+    "AEA"
   ],
   "key": {
     "E": "minecraft:echo_shard",
-    "F": "the-deepest-dark:fractured_soul"
+    "F": "the-deepest-dark:fractured_soul",
+    "A": "minecraft:amethyst_shard"
   },
   "result": {
     "id": "the-deepest-dark:activated_soul",

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "the-deepest-dark:block/deepest_dark_portal_ew"
+    },
+    "axis=z": {
+      "model": "the-deepest-dark:block/deepest_dark_portal_ns"
+    },
+    "axis=y": {
+      "model": "the-deepest-dark:block/deepest_dark_portal_ns"
+    }
+  }
+}

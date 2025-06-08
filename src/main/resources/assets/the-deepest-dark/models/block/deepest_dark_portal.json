@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "particle": "the-deepest-dark:block/deepest_dark_portal",
+    "portal": "the-deepest-dark:block/deepest_dark_portal"
+  }
+}
