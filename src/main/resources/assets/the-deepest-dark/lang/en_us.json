@@ -1,9 +1,9 @@
 {
   "itemGroup.the-deepest-dark": "The Deepest Dark",
   "item.the-deepest-dark.fractured_soul": "Fractured Soul",
-  "item.the-deepest-dark.activated_soul": "Activated Soul",
-  "item.the-deepest-dark.raw_sculk": "Raw Sculk",
-  "item.the-deepest-dark.cooked_sculk": "Cooked Sculk",
+  "item.the-deepest-dark.awakened_soul": "Awakened Soul",
+  "item.the-deepest-dark.raw_sculk_chunk": "Raw Sculk Chunk",
+  "item.the-deepest-dark.seared_sculk_chunk": "Seared Sculk Chunk",
   "item.the-deepest-dark.deepest_dark_portal": "Deep Dark Portal Block",
   "item.the-deepest-dark.poop": "poop"
 }

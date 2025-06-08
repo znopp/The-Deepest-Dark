@@ -50,6 +50,6 @@ public class ModBlocks {
             "poop",
             Block::new,
             AbstractBlock.Settings.copy(Blocks.DIRT),
-            false
+            true
     );
 }

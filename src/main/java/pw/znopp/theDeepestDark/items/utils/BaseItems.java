@@ -20,7 +20,7 @@ public class BaseItems {
             RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(TheDeepestDark.MOD_ID, "item_group"));
 
     public static final ItemGroup TDD_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(SoulItems.ACTIVATED_SOUL))
+            .icon(() -> new ItemStack(SoulItems.AWAKENED_SOUL))
             .displayName(Text.translatable("itemGroup.the-deepest-dark"))
             .build();
 

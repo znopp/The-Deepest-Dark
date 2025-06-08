@@ -23,35 +23,31 @@ public class FoodItems {
     private static final Collection<ItemStack> items = new ArrayList<>();
 
 
-    public static final Item RAW_SCULK = register("raw_sculk", settings -> new Item(settings
+    public static final Item RAW_SCULK_CHUNK = register("raw_sculk_chunk", settings -> new Item(settings
             .food(new FoodComponent.Builder()
-                            .nutrition(1)
-                            .saturationModifier(1)
+                            .nutrition(3)
+                            .saturationModifier(2)
                             .build(),
                     ConsumableComponent
                             .builder()
-                            .useAction(UseAction.DRINK)
-                            .consumeSeconds(0.5f)
+                            .useAction(UseAction.EAT)
                             .consumeEffect(new ApplyEffectsConsumeEffect(
-                                    new StatusEffectInstance(StatusEffects.POISON, 3 * 20, 0), 0.5f))
-                            .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.ITEM_AXE_SCRAPE))
-                            .finishSound(SoundEvents.ENTITY_BREEZE_WIND_BURST)
+                                    new StatusEffectInstance(StatusEffects.POISON, 3 * 20, 0), 0.75f))
+                            .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_SPREAD))
+                            .finishSound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_CATALYST_BLOOM))
                             .build())));
 
-    public static final Item COOKED_SCULK = register("cooked_sculk", settings -> new Item(settings
+    public static final Item SEARED_SCULK_CHUNK = register("seared_sculk_chunk", settings -> new Item(settings
             .food(new FoodComponent.Builder()
-                            .nutrition(2)
-                            .saturationModifier(2)
+                            .nutrition(6)
+                            .saturationModifier(4)
                             .build(),
                     ConsumableComponent.builder()
-                            .useAction(UseAction.SPEAR)
-                            .consumeSeconds(0.5f)
+                            .useAction(UseAction.EAT)
                             .consumeEffect(new ApplyEffectsConsumeEffect(
-                                    new StatusEffectInstance(StatusEffects.BLINDNESS, 3 * 20, 0), 0.5f))
-                            .consumeEffect(new ApplyEffectsConsumeEffect(
-                                    new StatusEffectInstance(StatusEffects.POISON, 20, 1), 0.05f))
-                            .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.ITEM_AXE_SCRAPE))
-                            .finishSound(SoundEvents.ENTITY_BREEZE_WIND_BURST)
+                                    new StatusEffectInstance(StatusEffects.POISON, 3 * 20, 1), 0.10f))
+                            .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_SPREAD))
+                            .finishSound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_CATALYST_BLOOM))
                             .build())));
 
     private static Item register(String name, Function<Item.Settings, Item> factory) {

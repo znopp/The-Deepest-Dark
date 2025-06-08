@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": "the-deepest-dark:raw_sculk_chunk",
+  "result": {
+    "id": "the-deepest-dark:seared_sculk_chunk"
+  },
+  "experience": 10,
+  "cookingtime": 600
+}
