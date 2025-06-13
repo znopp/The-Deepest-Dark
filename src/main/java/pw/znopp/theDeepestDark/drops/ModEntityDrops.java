@@ -10,7 +10,6 @@ public class ModEntityDrops {
     public static void register() {
         // Warden
         DropRegistry.register(EntityType.WARDEN, (entity, source) -> {
-
             if (entity.getWorld().isClient) return;
 
             ServerWorld world = (ServerWorld) entity.getWorld();
@@ -19,9 +18,7 @@ public class ModEntityDrops {
         });
 
         DropRegistry.register(EntityType.BAT, ((entity, source) -> {
-            if (entity.getWorld().isClient) {
-                return;
-            }
+            if (entity.getWorld().isClient) return;
 
             ServerWorld world = (ServerWorld) entity.getWorld();
             ItemStack drop = new ItemStack(ModBlocks.POOP);

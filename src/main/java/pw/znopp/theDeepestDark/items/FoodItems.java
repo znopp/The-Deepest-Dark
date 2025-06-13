@@ -3,13 +3,14 @@ package pw.znopp.theDeepestDark.items;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 import net.minecraft.item.consume.UseAction;
 import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundEvents;
+import pw.znopp.theDeepestDark.effects.blight.BlightConsumeEffect;
+import pw.znopp.theDeepestDark.effects.ModEffects;
 import pw.znopp.theDeepestDark.items.utils.ModItemRegistrar;
 
 import java.util.ArrayList;
@@ -31,8 +32,8 @@ public class FoodItems {
                     ConsumableComponent
                             .builder()
                             .useAction(UseAction.EAT)
-                            .consumeEffect(new ApplyEffectsConsumeEffect(
-                                    new StatusEffectInstance(StatusEffects.POISON, 3 * 20, 0), 0.75f))
+                            .consumeEffect(new BlightConsumeEffect(
+                                    new StatusEffectInstance(ModEffects.BLIGHT, 30 * 20, 1, false, true, true), 0.75f))
                             .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_SPREAD))
                             .finishSound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_CATALYST_BLOOM))
                             .build())));
@@ -45,7 +46,7 @@ public class FoodItems {
                     ConsumableComponent.builder()
                             .useAction(UseAction.EAT)
                             .consumeEffect(new ApplyEffectsConsumeEffect(
-                                    new StatusEffectInstance(StatusEffects.POISON, 3 * 20, 1), 0.10f))
+                                    new StatusEffectInstance(ModEffects.BLIGHT, 10 * 20, 0, false, true, true), 0.10f))
                             .sound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_SPREAD))
                             .finishSound(Registries.SOUND_EVENT.getEntry(SoundEvents.BLOCK_SCULK_CATALYST_BLOOM))
                             .build())));

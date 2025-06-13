@@ -5,5 +5,7 @@
   "item.the-deepest-dark.raw_sculk_chunk": "Raw Sculk Chunk",
   "item.the-deepest-dark.seared_sculk_chunk": "Seared Sculk Chunk",
   "item.the-deepest-dark.deepest_dark_portal": "Deep Dark Portal Block",
-  "item.the-deepest-dark.poop": "poop"
+  "item.the-deepest-dark.poop": "poop",
+  "effect.the-deepest-dark.blight": "Blight",
+  "death.attack.blight": "%1$s died to Blight"
 }

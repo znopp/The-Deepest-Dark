@@ -12,8 +12,14 @@ public class UseSoul {
     public static void triggerEffect(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) return;
 
-        // Replace item
-        user.setStackInHand(hand, new ItemStack(SoulItems.FRACTURED_SOUL));
+        user.getStackInHand(hand).decrement(1);
+
+        // Give or drop item depending on available slots
+        if (user.getInventory().getEmptySlot() == -1) {
+            user.dropItem(new ItemStack(SoulItems.FRACTURED_SOUL), true);
+        } else {
+            user.giveItemStack(new ItemStack(SoulItems.FRACTURED_SOUL));
+        }
 
         // Sound
         user.playSoundToPlayer(SoundEvents.ENTITY_ZOMBIE_VILLAGER_CURE, SoundCategory.MASTER, 1f, 0.5f);

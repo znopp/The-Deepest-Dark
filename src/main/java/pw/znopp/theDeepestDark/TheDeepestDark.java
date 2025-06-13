@@ -10,6 +10,7 @@ import pw.znopp.theDeepestDark.blocks.ModBlocks;
 import pw.znopp.theDeepestDark.blocks.utils.BaseBlocks;
 import pw.znopp.theDeepestDark.drops.DropRegistry;
 import pw.znopp.theDeepestDark.drops.ModEntityDrops;
+import pw.znopp.theDeepestDark.effects.ModEffects;
 import pw.znopp.theDeepestDark.interactions.UseSoul;
 import pw.znopp.theDeepestDark.items.SoulItems;
 import pw.znopp.theDeepestDark.items.utils.BaseItems;
@@ -25,6 +26,7 @@ public class TheDeepestDark implements ModInitializer {
 
         BaseItems.initialize();
         BaseBlocks.initialize();
+        ModEffects.initialize();
         DropRegistry.init();
         ModEntityDrops.register();
 
