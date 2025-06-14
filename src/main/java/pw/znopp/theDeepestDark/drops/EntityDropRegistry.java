@@ -6,16 +6,16 @@ import net.minecraft.entity.EntityType;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DropRegistry {
-    private static final Map<EntityType<?>, DropHandler> HANDLERS = new HashMap<>();
+public class EntityDropRegistry {
+    private static final Map<EntityType<?>, EntityDropHandler> HANDLERS = new HashMap<>();
 
-    public static void register(EntityType<?> type, DropHandler handler) {
+    public static void register(EntityType<?> type, EntityDropHandler handler) {
         HANDLERS.put(type, handler);
     }
 
     public static void init() {
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
-            DropHandler handler = HANDLERS.get(entity.getType());
+            EntityDropHandler handler = HANDLERS.get(entity.getType());
             if (handler == null) {
                 return;
             }

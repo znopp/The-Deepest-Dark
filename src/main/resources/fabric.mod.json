@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "the-deepest-dark",
+  "accesswidener": "the-deepest-dark.accesswidener",
   "version": "${version}",
   "name": "The Deepest Dark",
   "description": "You know that portal looking thing in the ancient city? Yeah. That's a portal now.",

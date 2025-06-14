@@ -4,6 +4,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 
 @FunctionalInterface
-public interface DropHandler {
+public interface EntityDropHandler {
     void handleDrops(LivingEntity entity, DamageSource source);
 }

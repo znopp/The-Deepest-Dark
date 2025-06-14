@@ -9,7 +9,7 @@ import pw.znopp.theDeepestDark.items.SoulItems;
 public class ModEntityDrops {
     public static void register() {
         // Warden
-        DropRegistry.register(EntityType.WARDEN, (entity, source) -> {
+        EntityDropRegistry.register(EntityType.WARDEN, (entity, source) -> {
             if (entity.getWorld().isClient) return;
 
             ServerWorld world = (ServerWorld) entity.getWorld();
@@ -17,7 +17,7 @@ public class ModEntityDrops {
             entity.dropStack(world, drop);
         });
 
-        DropRegistry.register(EntityType.BAT, ((entity, source) -> {
+        EntityDropRegistry.register(EntityType.BAT, ((entity, source) -> {
             if (entity.getWorld().isClient) return;
 
             ServerWorld world = (ServerWorld) entity.getWorld();

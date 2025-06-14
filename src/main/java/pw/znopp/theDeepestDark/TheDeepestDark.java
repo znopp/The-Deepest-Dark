@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pw.znopp.theDeepestDark.blocks.ModBlocks;
 import pw.znopp.theDeepestDark.blocks.utils.BaseBlocks;
-import pw.znopp.theDeepestDark.drops.DropRegistry;
+import pw.znopp.theDeepestDark.drops.BlockDropRegistry;
+import pw.znopp.theDeepestDark.drops.EntityDropRegistry;
+import pw.znopp.theDeepestDark.drops.ModBlockDrops;
 import pw.znopp.theDeepestDark.drops.ModEntityDrops;
 import pw.znopp.theDeepestDark.effects.ModEffects;
 import pw.znopp.theDeepestDark.interactions.UseSoul;
@@ -27,8 +29,10 @@ public class TheDeepestDark implements ModInitializer {
         BaseItems.initialize();
         BaseBlocks.initialize();
         ModEffects.initialize();
-        DropRegistry.init();
+        EntityDropRegistry.init();
         ModEntityDrops.register();
+        BlockDropRegistry.init();
+        ModBlockDrops.register();
 
         CustomPortalBuilder.beginPortal()
                 .frameBlock(Blocks.REINFORCED_DEEPSLATE)

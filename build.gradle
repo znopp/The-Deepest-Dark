@@ -19,6 +19,8 @@ loom {
             sourceSet sourceSets.client
         }
     }
+
+    accessWidenerPath = file("src/main/resources/the-deepest-dark.accesswidener")
 }
 
 fabricApi {
